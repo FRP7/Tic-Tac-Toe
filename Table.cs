@@ -12,15 +12,15 @@ namespace TicTacToe
         };
 
         private void DrawTable() {
-            Console.WriteLine($"    |     |   ");
-            Console.WriteLine($" {slots[0]}  |  {slots[1]}  | {slots[2]}   "); 
-            Console.WriteLine($"____|_____|____"); 
-            Console.WriteLine($"    |     |   ");
-            Console.WriteLine($"  {slots[3]} |  {slots[4]}  | {slots[5]}   ");
-            Console.WriteLine($"____|_____|____"); 
-            Console.WriteLine($"    |     |   "); 
-            Console.WriteLine($" {slots[6]}  |  {slots[7]}  |  {slots[8]}  ");
-            Console.WriteLine($"    |     |   ");
+            Console.WriteLine($"     |     |   ");
+            Console.WriteLine($"  {slots[0]}  |  {slots[1]}  |  {slots[2]}   "); 
+            Console.WriteLine($"_____|_____|_____"); 
+            Console.WriteLine($"     |     |   ");
+            Console.WriteLine($"  {slots[3]}  |  {slots[4]}  |  {slots[5]}   ");
+            Console.WriteLine($"_____|_____|_____"); 
+            Console.WriteLine($"     |     |   "); 
+            Console.WriteLine($"  {slots[6]}  |  {slots[7]}  |  {slots[8]}  ");
+            Console.WriteLine($"     |     |   ");
         }
 
         public void Mark() {
@@ -28,7 +28,7 @@ namespace TicTacToe
             string userinput;
             int input;
             while (gameloop.CheckWin() == false) {
-                    //Console.Clear();
+                    Console.Clear();
                     Console.WriteLine("Escolhe uma slot para colocar X");
                     DrawTable();
                 userinput = Console.ReadLine();
