@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Francisco\\Desktop\\lusófona\\C# aulas\\TicTacToe\\TicTacToe.csproj",
+      "projectUniqueName": "C:\\Users\\Francisco\\Documents\\GitHub\\Tic-Tac-Toe\\TicTacToe.csproj",
       "projectName": "TicTacToe",
-      "projectPath": "C:\\Users\\Francisco\\Desktop\\lusófona\\C# aulas\\TicTacToe\\TicTacToe.csproj",
+      "projectPath": "C:\\Users\\Francisco\\Documents\\GitHub\\Tic-Tac-Toe\\TicTacToe.csproj",
       "packagesPath": "C:\\Users\\Francisco\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Francisco\\Desktop\\lusófona\\C# aulas\\TicTacToe\\obj\\",
+      "outputPath": "C:\\Users\\Francisco\\Documents\\GitHub\\Tic-Tac-Toe\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
