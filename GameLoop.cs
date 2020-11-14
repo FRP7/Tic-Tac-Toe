@@ -8,54 +8,105 @@ namespace TicTacToe
     class GameLoop
     {
         public string[] CheckSlot = new string[9];
+
         public bool CheckWin() {
             Table table = new Table();
-            Console.WriteLine("A checkwin está a correr");
+            int count = 0;
+
             // Horizontais
-            if (CheckSlot[0] == "X" && CheckSlot[1] == "X" 
-                && CheckSlot[2] == "X") {
-                Console.WriteLine("Ganhou!!!");
-                return true;
-            } else if (CheckSlot[3] == "X" && CheckSlot[4] == "X"
-               && CheckSlot[5] == "X") {
-                Console.WriteLine("Ganhou!!!");
-                return true;
-            } else if (CheckSlot[6] == "X" && CheckSlot[7] == "X"
-                 && CheckSlot[8] == "X") {
-                Console.WriteLine("Ganhou!!!");
-                return true;
+            for(int i = 0; i < 3; i++) {
+                if(CheckSlot[i] == "X") {
+                    count++;
+                }
+                if(count == 3) {
+                    Console.WriteLine("Ganhou!!!");
+                    return true;
+                }
             }
-              //
-              // Verticais
-              else if (CheckSlot[0] == "X" && CheckSlot[3] == "X"
-                  && CheckSlot[6] == "X") {
-                Console.WriteLine("Ganhou!!!");
-                return true;
-            } else if (CheckSlot[1] == "X" && CheckSlot[4] == "X"
-               && CheckSlot[7] == "X") {
-                Console.WriteLine("Ganhou!!!");
-                return true;
-            } else if (CheckSlot[2] == "X" && CheckSlot[5] == "X"
-                 && CheckSlot[8] == "X") {
-                Console.WriteLine("Ganhou!!!");
-                return true;
+
+            count = default;
+            for(int i = 3; i < 6; i++) {
+                if (CheckSlot[i] == "X") {
+                    count++;
+                }
+                if (count == 3) {
+                    Console.WriteLine("Ganhou!!!");
+                    return true;
+                }
+            }
+
+            count = default;
+            for (int i = 6; i < 9; i++) {
+                if (CheckSlot[i] == "X") {
+                    count++;
+                }
+                if (count == 3) {
+                    Console.WriteLine("Ganhou!!!");
+                    return true;
+                }
             }
             //
+            // Verticais
+            count = default;
+            for (int i = 0; i < 7; i+= 3) {
+                if (CheckSlot[i] == "X") {
+                    count++;
+                }
+                if (count == 3) {
+                    Console.WriteLine("Ganhou!!!");
+                    return true;
+                }
+            }
+
+            count = default;
+            for (int i = 1; i < 8; i += 3) {
+                if (CheckSlot[i] == "X") {
+                    count++;
+                }
+                if (count == 3) {
+                    Console.WriteLine("Ganhou!!!");
+                    return true;
+                }
+            }
+
+            count = default;
+            for (int i = 2; i < 9; i += 3) {
+                if (CheckSlot[i] == "X") {
+                    count++;
+                }
+                if (count == 3) {
+                    Console.WriteLine("Ganhou!!!");
+                    return true;
+                }
+            }
+
+            //
             // Diagonais
-            else if (CheckSlot[0] == "X" && CheckSlot[4] == "X"
-                && CheckSlot[8] == "X") {
-                Console.WriteLine("Ganhou!!!");
-                return true;
-            } else if (CheckSlot[2] == "X" && CheckSlot[4] == "X"
-               && CheckSlot[6] == "X") {
-                Console.WriteLine("Ganhou!!!");
-                return true;
+            count = default;
+            for (int i = 0; i < 9; i += 4) {
+                if (CheckSlot[i] == "X") {
+                    count++;
+                }
+                if (count == 3) {
+                    Console.WriteLine("Ganhou!!!");
+                    return true;
+                }
+            }
+
+            count = default;
+            for (int i = 2; i < 7; i += 2) {
+                if (CheckSlot[i] == "X") {
+                    count++;
+                }
+                if (count == 3) {
+                    Console.WriteLine("Ganhou!!!");
+                    return true;
+                }
             }
             //
             // Se não há linha em nenhum desses lados, retorna falso.
-            else {
-                return false;
-            }
+            return false;
+            //
         }
     }
     //
