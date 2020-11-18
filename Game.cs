@@ -2,14 +2,32 @@
 
 namespace TicTacToe
 {
-    /// <summary>
-    /// Classe mãe do jogo.
-    /// </summary>
     class Game
     {
-        public void Teste() {
+        public void GameLoop() {
             Table table = new Table();
-            table.Mark();
+            Player player = new Player();
+            AI ai = new AI();
+            /*Console.WriteLine("Game loop");
+            table.DrawTable();
+            player.Play();
+            CheckWin();
+            ai.Play();
+            CheckWin();*/
+
+            while(CheckWin() == false) {
+                Console.WriteLine("Game loop");
+                table.DrawTable();
+                player.Play();
+                CheckWin();
+                ai.Play();
+                CheckWin();
+            }
+        }
+
+        public bool CheckWin() {
+            Console.WriteLine("Check win");
+            return false;
         }
     }
 }
