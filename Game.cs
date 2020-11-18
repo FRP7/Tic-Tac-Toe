@@ -4,29 +4,30 @@ namespace TicTacToe
 {
     class Game
     {
+        public string[] CheckSlot = new string[9];
+
         public void GameLoop() {
             Table table = new Table();
             Player player = new Player();
             AI ai = new AI();
-            /*Console.WriteLine("Game loop");
-            table.DrawTable();
-            player.Play();
-            CheckWin();
-            ai.Play();
-            CheckWin();*/
 
-            while(CheckWin() == false) {
+            /*while(CheckWin() == false) {
                 Console.WriteLine("Game loop");
                 table.DrawTable();
                 player.Play();
                 CheckWin();
                 ai.Play();
                 CheckWin();
-            }
+            }*/
+            table.DrawTable();
+            player.Play();
+            CheckWin();
+            table.DrawTable();
         }
 
         public bool CheckWin() {
             Console.WriteLine("Check win");
+
             return false;
         }
     }

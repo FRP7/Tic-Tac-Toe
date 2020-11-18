@@ -6,6 +6,19 @@ namespace TicTacToe
     {
         public void Play() {
             Console.WriteLine("Player plays");
+            Game game = new Game();
+            string userinput;
+            int input;
+
+            userinput = Console.ReadLine();
+
+              if(Int32.TryParse(userinput, out input)) { 
+                Console.WriteLine("jogar");
+                game.CheckSlot[input - 1] = "X";
+            }
+              else {
+                Console.WriteLine("Valor inválido, tente de novo");
+            }
         }
     }
 }
