@@ -4,7 +4,7 @@ namespace TicTacToe
 {
     class Game
     {
-        public string[] CheckSlot = new string[9];
+        public string[] checkSlot = new string[9];
 
         public void GameLoop() {
             Table table = new Table();
