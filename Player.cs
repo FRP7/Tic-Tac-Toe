@@ -5,19 +5,21 @@ namespace TicTacToe
     class Player
     {
         public void Play() {
-            Console.WriteLine("Player plays");
+            Console.WriteLine("Turno do jogador:");
             Game game = new Game();
             string userinput;
             int input;
+            bool isInput = false;
 
-            userinput = Console.ReadLine();
-
-              if(Int32.TryParse(userinput, out input)) { 
-                Console.WriteLine("jogar");
-                Game.slots[input - 1] = "X";
-            }
-              else {
-                Console.WriteLine("Valor inválido, tente de novo");
+            while (isInput == false) {
+                userinput = Console.ReadLine();
+                if (Int32.TryParse(userinput, out input)) {
+                    Console.WriteLine("Escolha uma casa");
+                    Game.slots[input - 1] = "X";
+                    isInput = true;
+                } else {
+                    Console.WriteLine("Valor inválido, tente de novo");
+                }
             }
         }
     }

@@ -15,18 +15,14 @@ namespace TicTacToe
             Table table = new Table();
             AI ai = new AI();
 
-            /*while(CheckWin() == false) {
+            while(CheckWin() == false) {
                 Console.WriteLine("Game loop");
                 table.DrawTable();
                 player.Play();
                 CheckWin();
                 ai.Play();
                 CheckWin();
-            }*/
-            table.DrawTable();
-            player.Play();
-            CheckWin();
-            table.DrawTable();
+            }
         }
 
         public bool CheckWin() {

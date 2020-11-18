@@ -5,7 +5,7 @@ namespace TicTacToe
     class AI
     {
         public void Play() {
-            Console.WriteLine("AI plays");
+            Console.WriteLine("Turno da AI");
         }
     }
 }
