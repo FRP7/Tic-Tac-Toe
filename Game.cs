@@ -6,7 +6,7 @@ namespace TicTacToe
     {
         Player player = new Player();
 
-        public string[] slots = new string[]
+        public static string[] slots = new string[]
            {
                 "1", "2", "3", "4", "5", "6", "7", "8", "9"
            };

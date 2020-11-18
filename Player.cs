@@ -14,7 +14,7 @@ namespace TicTacToe
 
               if(Int32.TryParse(userinput, out input)) { 
                 Console.WriteLine("jogar");
-                game.slots[input - 1] = "X";
+                Game.slots[input - 1] = "X";
             }
               else {
                 Console.WriteLine("Valor inválido, tente de novo");

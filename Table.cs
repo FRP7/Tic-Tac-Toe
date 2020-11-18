@@ -7,16 +7,16 @@ namespace TicTacToe
         public void DrawTable() {
             Game game = new Game();
             Console.WriteLine($"     |     |   ");
-            Console.WriteLine($"  {game.slots[0]}  |  {game.slots[1]}  |  {game.slots[2]}   ");
+            Console.WriteLine($"  {Game.slots[0]}  |  {Game.slots[1]}  |  {Game.slots[2]}   ");
             Console.WriteLine($"_____|_____|_____");
             Console.WriteLine($"     |     |   ");
-            Console.WriteLine($"  {game.slots[3]}  |  {game.slots[4]}  |  {game.slots[5]}   ");
+            Console.WriteLine($"  {Game.slots[3]}  |  {Game.slots[4]}  |  {Game.slots[5]}   ");
             Console.WriteLine($"_____|_____|_____");
             Console.WriteLine($"     |     |   ");
-            Console.WriteLine($"  {game.slots[6]}  |  {game.slots[7]}  |  {game.slots[8]}  ");
+            Console.WriteLine($"  {Game.slots[6]}  |  {Game.slots[7]}  |  {Game.slots[8]}  ");
             Console.WriteLine($"     |     |   ");
 
-            foreach(var teste in game.slots) {
+            foreach(var teste in Game.slots) {
                 Console.WriteLine("Slots: " + teste);
             }
         }
