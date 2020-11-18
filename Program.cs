@@ -3,15 +3,14 @@
 namespace TicTacToe
 {
     /// <summary>
-    /// Classe onde começa o programa.
-    /// Não faz mais nada sem ser chamar a classe Game.
+    /// Classe onde começa o jogo.
     /// </summary>
     class Program
     {
         static void Main(string[] args) {
+            // Iniciar o jogo.
             Game game = new Game();
-            game.Teste();
+            game.GameLoop();
         }
     }
-    //
 }
