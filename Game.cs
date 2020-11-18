@@ -2,13 +2,18 @@
 
 namespace TicTacToe
 {
+    /// <summary>
+    /// Classe onde é feito o gameloop e é verificado o estado do jogo.
+    /// </summary>
     class Game
     {
+        // Variável estática onde estão as casas do tabuleiro.
         public static string[] slots = new string[]
-           {
+        {
                 "1", "2", "3", "4", "5", "6", "7", "8", "9"
-           };
+        };
 
+        // Método onde acontece a ordem de jogo.
         public void GameLoop() {
             Player player = new Player();
             Table table = new Table();
@@ -24,6 +29,7 @@ namespace TicTacToe
             }
         }
 
+        // Método que verifica se existe vitória.
         public bool CheckWin() {
             int count = 0;
 
@@ -59,7 +65,7 @@ namespace TicTacToe
                     return true;
                 }
             }
-            //
+
             // Verticais
             count = default;
             for (int i = 0; i < 7; i += 3) {
@@ -94,7 +100,6 @@ namespace TicTacToe
                 }
             }
 
-            //
             // Diagonais
             count = default;
             for (int i = 0; i < 9; i += 4) {
@@ -117,10 +122,9 @@ namespace TicTacToe
                     return true;
                 }
             }
-            //
+
             // Se não há linha em nenhum desses lados, retorna falso.
             return false;
-            //
         }
     }
 }

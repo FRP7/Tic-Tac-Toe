@@ -2,18 +2,22 @@
 
 namespace TicTacToe
 {
+    /// <summary>
+    /// Classe onde o jogador joga.
+    /// </summary>
     class Player
     {
+        // Método onde o jogador joga
         public void Play() {
             Console.WriteLine("Turno do jogador:");
             Game game = new Game();
-            string userinput;
+            string userInput;
             int input;
             bool isInput = false;
 
             while (isInput == false) {
-                userinput = Console.ReadLine();
-                if (Int32.TryParse(userinput, out input)) {
+                userInput = Console.ReadLine();
+                if (Int32.TryParse(userInput, out input)) {
                     Console.WriteLine("Escolha uma casa");
                     Game.slots[input - 1] = "X";
                     isInput = true;
