@@ -3,7 +3,7 @@
 namespace TicTacToe
 {
     /// <summary>
-    /// Classe onde é feito o gameloop e é verificado o estado do jogo.
+    /// Classe onde é feito o ciclo de jogo e é verificado o estado do jogo.
     /// </summary>
     class Game
     {

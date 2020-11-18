@@ -11,7 +11,6 @@ namespace TicTacToe
             // Iniciar o jogo.
             Game game = new Game();
             game.GameLoop();
-            //
         }
     }
 }
