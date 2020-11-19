@@ -13,7 +13,7 @@ namespace TicTacToe
         private int minEval;
         private string eval;
 
-        // Lista de possíveis vitórias
+        /*// Lista de possíveis vitórias
         private static List<string[]> winConditions = new List<string[]>() {
             new string[] {"1", "2", "3"},
              new string[] {"4", "5", "6"},
@@ -23,8 +23,19 @@ namespace TicTacToe
                  new string[] {"3", "6", "9"},
                   new string[] {"1", "5", "9"},
                    new string[] {"3", "5", "7"}
-        };
+        };*/
 
+        // Dicionário de possíveis vitórias
+        private static Dictionary<string[], int> winCondition = new Dictionary<string[], int>() {
+            {new string[] {"1", "2", "3"}, 0 },
+            {new string[] {"4", "5", "6"}, 0 },
+            {new string[] {"7", "8", "9"}, 0 },
+            {new string[] {"1", "4", "7"}, 0 },
+            {new string[] {"2", "5", "8"}, 0 },
+            {new string[] {"3", "6", "9"}, 0 },
+            {new string[] {"1", "5", "9"}, 0 },
+            {new string[] {"3", "5", "7"}, 0 }
+        };
 
         // Método onde a AI joga
         public void Play() {
