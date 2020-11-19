@@ -24,8 +24,25 @@ namespace TicTacToe
         // Método onde a AI joga
         public void Play() {
             Console.WriteLine("Turno da AI");
-            Minimax(2000, 0);
-            Game.slots[HighestScore()] = "O";
+            bool isPlayed = false;
+            while(isPlayed == false) {
+                Game.slots[Minimax(100, 0)] = "O";
+                isPlayed = true;
+            }
+        }
+
+        private int Minimax(int maxDepth, int currentDepth) {
+            Game board = new Game();
+            int bestScore = 0;
+            if(board.CheckWin() == false || currentDepth == maxDepth) {
+                Evaluate();
+            } else if(currentDepth < maxDepth) {
+                foreach(KeyValuePair<int, int> play in possiblePlays) {
+                    Minimax(100, currentDepth + 1);
+                }
+                bestScore = HighestScore();
+            }
+            return bestScore;
         }
 
         private void Evaluate() {
@@ -55,17 +72,6 @@ namespace TicTacToe
             }
             if (Game.slots[8] == "X") {
                 possiblePlays[7] += 1;
-            }
-        }
-
-        private void Minimax(int maxDepth, int currentDepth) {
-            if(currentDepth < maxDepth) {
-                /* Para cada jogada possível, chamar Minimax(currentDepth +1)
-                 * Devolver melhor jogada*/
-                foreach(KeyValuePair<int, int> play in possiblePlays) {
-                    Minimax(maxDepth, currentDepth + 1);
-                    Evaluate();
-                }
             }
         }
 
