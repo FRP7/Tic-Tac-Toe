@@ -18,7 +18,7 @@ namespace TicTacToe
             while (isInput == false) {
                 userInput = Console.ReadLine();
                 if (Int32.TryParse(userInput, out input) &&
-                    input <= Game.slots.Length) {
+                    input <= Game.slots.Length && Game.slots[input - 1] != "X") {
                     Game.slots[input - 1] = "X";
                     isInput = true;
                 } else {
