@@ -1,20 +1,35 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace TicTacToe
 {
     /// <summary>
     /// Classe onde o computador joga.
     /// </summary>
-    class AI
-    {
+    class AI {
         // Avaliação estática.
         private static int heuristic;
         private int maxEval;
         private int minEval;
         private string eval;
 
+        // Lista de possíveis vitórias
+        private static List<string[]> winConditions = new List<string[]>() {
+            new string[] {"1", "2", "3"},
+             new string[] {"4", "5", "6"},
+              new string[] {"7", "8", "9"},
+               new string[] {"1", "4", "7"},
+                new string[] {"2", "5", "8"},
+                 new string[] {"3", "6", "9"},
+                  new string[] {"1", "5", "9"},
+                   new string[] {"3", "5", "7"}
+        };
+
+
         // Método onde a AI joga
         public void Play() {
+            Console.WriteLine("Turno da AI");
+            //Minimax();
             /*Console.WriteLine("Turno da AI");
             Random rnd = new Random();
             int rndPlay = rnd.Next(1, 10);
@@ -36,7 +51,7 @@ namespace TicTacToe
                 // retomar avaliação de position
             }*/
 
-            if(maximizingPlayer == true) {
+            if (maximizingPlayer == true) {
                 maxEval = -10000;
                 // foreach de lista de posições possívels
                 /*foreach(var item in lista)
