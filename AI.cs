@@ -13,28 +13,17 @@ namespace TicTacToe
         private int minEval;
         private string eval;
 
-        /*// Lista de possíveis vitórias
-        private static List<string[]> winConditions = new List<string[]>() {
-            new string[] {"1", "2", "3"},
-             new string[] {"4", "5", "6"},
-              new string[] {"7", "8", "9"},
-               new string[] {"1", "4", "7"},
-                new string[] {"2", "5", "8"},
-                 new string[] {"3", "6", "9"},
-                  new string[] {"1", "5", "9"},
-                   new string[] {"3", "5", "7"}
-        };*/
-
-        // Dicionário de possíveis vitórias
-        private static Dictionary<string[], int> winCondition = new Dictionary<string[], int>() {
-            {new string[] {"1", "2", "3"}, 0 },
-            {new string[] {"4", "5", "6"}, 0 },
-            {new string[] {"7", "8", "9"}, 0 },
-            {new string[] {"1", "4", "7"}, 0 },
-            {new string[] {"2", "5", "8"}, 0 },
-            {new string[] {"3", "6", "9"}, 0 },
-            {new string[] {"1", "5", "9"}, 0 },
-            {new string[] {"3", "5", "7"}, 0 }
+        // Dicionário de jogadas possíveis com o score a 0 por default
+        private static Dictionary<int, int> possiblePlays = new Dictionary<int, int>() {
+            {0, 0}, // escolher casa 1
+            {1, 0}, // escolher casa 2
+            {2, 0}, // escolher casa 3
+            {3, 0}, // escolher casa 4
+            {4, 0}, // escolher casa 5
+            {5, 0}, // escolher casa 6
+            {6, 0}, // escolher casa 7
+            {7, 0}, // escolher casa 8
+            {8, 0}  // escolher casa 9
         };
 
         // Método onde a AI joga
@@ -55,6 +44,12 @@ namespace TicTacToe
                     rndPlay = rnd.Next(1, 10);
                 }
             }*/
+        }
+
+        private void Evaluate() {
+            if(Game.slots[0] == "X") {
+                
+            }
         }
 
         private void Minimax(string position, int depth, bool maximizingPlayer) {
